@@ -19,8 +19,6 @@ ENV PATH $PATH:/composer/vendor/bin
 
 RUN composer global require "laravel/installer"
 
-RUN cd app && composer install
-
 ADD app /app
 
 # ポート設定
