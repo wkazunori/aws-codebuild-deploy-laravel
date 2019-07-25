@@ -18,4 +18,4 @@ workflows:
           aws-region: ${AWS_DEFAULT_REGION}
           family: "njss_kamuy-dev-web"
           cluster-name: "njss-kamuy-dev-web"
-          container-image-name-updates: "container=njss_kamuy-dev/laravel-sample,image-and-tag=${AWS_ECR_ACCOUNT_URL}/njss_kamuy-dev/laravel-sample:${CIRCLE_SHA1}"
+          container-image-name-updates: "container=LaravelSample,image-and-tag=${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/njss_kamuy-dev/laravel-sample:${CIRCLE_SHA1}"
