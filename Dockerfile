@@ -21,6 +21,8 @@ RUN composer global require "laravel/installer"
 
 ADD app /app
 
+RUN cd app && composer install
+
 # ポート設定
 EXPOSE 8000
 
