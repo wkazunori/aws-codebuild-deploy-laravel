@@ -7,6 +7,7 @@ orbs:
 workflows:
   build-and-deploy:
     jobs:
+      # develop環境へのデプロイ
       - aws-ecr/build-and-push-image:
           filters:
             branches:
@@ -25,4 +26,4 @@ workflows:
           service-name: "njss-kamuy-dev-web"
           family: "njss_kamuy-dev-web"
           cluster-name: "njss_kamuy-dev-web"
-          container-image-name-updates: "container=LaravelSample,image-and-tag=${AWS_ECR_ACCOUNT_URL}/njss_kamuy-dev/laravel-sample:${CIRCLE_SHA1}"
+          container-image-name-updates: "container=LaravelSample,tag=${CIRCLE_TAG}"
