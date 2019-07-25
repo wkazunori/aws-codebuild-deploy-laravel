@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  aws-ecs: circleci/aws-ecs@0.0.3
+  aws-ecs: circleci/aws-ecs@4.0.1
   aws-ecr: circleci/aws-ecr@0.0.2
 
 workflows:
