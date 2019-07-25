@@ -10,7 +10,7 @@ workflows:
       - aws-ecr/build-and-push-image:
           account-url: "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com"
           repo: "njss_kamuy-dev/laravel-sample"
-          region: ${AWS_DEFAULT_REGION}
+          region: AWS_DEFAULT_REGION
           tag: "${CIRCLE_SHA1}"
       - aws-ecs/deploy-service-update:
           requires:
