@@ -6,9 +6,9 @@ orbs:
 
 workflows:
   build-and-deploy:
-    environment:
-      ECR_REPO_NAME: "njss_kamuy-dev/laravel-sample"
     jobs:
+      environment:
+        ECR_REPO_NAME: "njss_kamuy-dev/laravel-sample"
       - aws-ecr/build-and-push-image:
           account-url: AWS_ECR_ACCOUNT_URL
           repo: ${ECR_REPO_NAME}
