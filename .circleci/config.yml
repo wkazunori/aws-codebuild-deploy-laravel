@@ -8,7 +8,7 @@ workflows:
   build-and-deploy:
     jobs:
       - aws-ecr/build_and_push_image:
-          account-url: "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com"
+          account-url: "790392395917.dkr.ecr.ap-northeast-1.amazonaws.com"
           repo: "njss_kamuy-dev/laravel-sample"
           region: ${AWS_DEFAULT_REGION}
           tag: "${CIRCLE_SHA1}"
