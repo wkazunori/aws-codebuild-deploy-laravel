@@ -5,9 +5,9 @@ orbs:
   aws-ecs: circleci/aws-ecs@0.0.8
 
 workflows:
-  environment:
-    ECR_REPO_NAME: "njss_kamuy-dev/laravel-sample"
   build-and-deploy:
+    environment:
+      ECR_REPO_NAME: "njss_kamuy-dev/laravel-sample"
     jobs:
       - aws-ecr/build-and-push-image:
           account-url: AWS_ECR_ACCOUNT_URL
