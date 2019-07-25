@@ -16,6 +16,7 @@ workflows:
           requires:
             - aws-ecr/build_and_push_image
           aws-region: ${AWS_DEFAULT_REGION}
+          service-name: "njss-kamuy-dev-web"
           family: "njss_kamuy-dev-web"
           cluster-name: "njss_kamuy-dev-web"
           container-image-name-updates: "container=LaravelSample,image-and-tag=${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/njss_kamuy-dev/laravel-sample:${CIRCLE_SHA1}"
