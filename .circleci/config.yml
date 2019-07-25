@@ -14,7 +14,7 @@ workflows:
           account-url: AWS_ECR_ACCOUNT_URL
           repo: "njss_kamuy-dev/laravel-sample"
           region: AWS_DEFAULT_REGION
-          tag: CIRCLE_SHA1
+          tag: ${CIRCLE_SHA1}
       - aws-ecs/deploy-service-update:
           filters:
             branches:
