@@ -5,7 +5,7 @@ orbs:
   aws-ecs: circleci/aws-ecs@0.0.8
 
 workflows:
-  nvironment:
+  environment:
     ECR_REPO_NAME: "njss_kamuy-dev/laravel-sample"
   build-and-deploy:
     jobs:
