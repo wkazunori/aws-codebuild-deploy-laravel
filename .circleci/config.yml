@@ -12,6 +12,9 @@ workflows:
           filters:
             branches:
               only: develop
+          account-url: AWS_ECR_ACCOUNT_URL_DEV
+          aws-access-key-id: AWS_ACCESS_KEY_ID_DEV
+          aws-secret-access-key: AWS_SECRET_ACCESS_KEY_DEV
           repo: "njss_kamuy-dev/laravel-sample"
           tag: ${CIRCLE_SHA1}
       - aws-ecs/deploy-service-update:
@@ -20,6 +23,8 @@ workflows:
               only: develop
           requires:
             - aws-ecr/build-and-push-image
+          aws-access-key-id: ${AWS_ACCESS_KEY_ID_DEV}
+          aws-secret-access-key: ${AWS_SECRET_ACCESS_KEY_DEV}
           service-name: "njss-kamuy-dev-web"
           family: "njss_kamuy-dev-web"
           cluster-name: "njss_kamuy-dev-web"
