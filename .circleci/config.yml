@@ -12,9 +12,7 @@ workflows:
           filters:
             branches:
               only: develop
-          account-url: AWS_ECR_ACCOUNT_URL
           repo: "njss_kamuy-dev/laravel-sample"
-          region: AWS_DEFAULT_REGION
           tag: ${CIRCLE_SHA1}
       - aws-ecs/deploy-service-update:
           filters:
@@ -22,7 +20,6 @@ workflows:
               only: develop
           requires:
             - aws-ecr/build-and-push-image
-          aws-region: ${AWS_DEFAULT_REGION}
           service-name: "njss-kamuy-dev-web"
           family: "njss_kamuy-dev-web"
           cluster-name: "njss_kamuy-dev-web"
