@@ -28,4 +28,4 @@ workflows:
           service-name: "njss-kamuy-dev-web"
           family: "njss_kamuy-dev-web"
           cluster-name: "njss_kamuy-dev-web"
-          container-image-name-updates: "container=LaravelSample,tag=${CIRCLE_TAG}"
+          container-image-name-updates: "container=LaravelSample,tag=${CIRCLE_SHA1}"
