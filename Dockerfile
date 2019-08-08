@@ -13,7 +13,6 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && mv composer.phar /usr/local/bin/composer
 
 ENV COMPOSER_ALLOW_SUPERUSER 1
-
 ENV COMPOSER_HOME /composer
 ENV PATH $PATH:/composer/vendor/bin
 
